@@ -20,7 +20,7 @@ $ python3 -m http.server [port]
 
 ![image](https://github.com/Alopex4/pydl/blob/master/photoes/tradition.png)
 
-#IF you prefer CLI, this script is built for you.
+# IF you prefer CLI, this script is built for you.
 ```Bash
 $ chmod +x pydl.sh
 ```
