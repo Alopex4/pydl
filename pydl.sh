@@ -1,31 +1,47 @@
 #!/bin/bash
 
-# Error code
-MISS_ARG=-1
-OVER_RANGE=-2
-UNKNOWN=-3
-PORT_ERROR=-4
-NETWORK_ERROR=-5
-OK=0
+#-------------CopyRight-------------  
+#   Name: pydl
+#   Version Number: 1.0
+#   Type: download assistance
+#   Language: bash shell  
+#   Date: 2018-7-24
+#   Author: Alopex
+#   Email: alopex4@163.com
+#------------Environment------------  
+#   operating system Ubuntu 16.04 xenial
+#   Linux 4.15.0-24-generic
+#   GNU Bash 4.3
+#-----------------------------------  
 
-# color code
-RED="\e[31m"
-GREEN='\e[32m'
-BLUE='\e[34m'
-DEFAULT="\e[0m"
-BOLD="\e[1m"
+# Error code
+readonly MISS_ARG=-1
+readonly OVER_RANGE=-2
+readonly UNKNOWN=-3
+readonly PORT_ERROR=-4
+readonly NETWORK_ERROR=-5
+readonly OK=0
+
+# Color code
+readonly RED="\e[31m"
+readonly GREEN='\e[32m'
+readonly BLUE='\e[34m'
+readonly DEFAULT="\e[0m"
+readonly BOLD="\e[1m"
 
 # Argument
-IP="${1}"
-t_port="${2}"
-PORT="${t_port:-"8000"}"
+readonly IP="${1}"
+readonly t_port="${2}"
+readonly PORT="${t_port:-"8000"}"
 
 # Global var
-re_ip='^([1-2]?[0-9]{1,2}\.){3}[1-2]?[0-9]{1,2}$'
-source_index="http://${IP}:${PORT}/"
+readonly re_ip='^([1-2]?[0-9]{1,2}\.){3}[1-2]?[0-9]{1,2}$'
+readonly source_index="http://${IP}:${PORT}/"
+readonly temp_dir="/tmp/"
+readonly index_page="/tmp/index.html"
+
+# Mutable var
 index="http://${IP}:${PORT}/"
-temp_dir="/tmp/"
-index_page="/tmp/index.html"
 
 Usage(){
     local t_key=${1}
@@ -230,7 +246,8 @@ list_choice(){
 }
 
 main(){
-    if [ "$#" -eq "0" ]
+    local arg_num=$#
+    if [ "${arg_num}" -eq "0" ]
     then
         Usage
     else
