@@ -9,7 +9,7 @@
 #   Author: Alopex
 #   Email: alopex4@163.com
 #------------Environment------------  
-#   operating system Ubuntu 16.04 xenial
+#   Operating System Ubuntu 16.04 xenial
 #   Linux 4.15.0-24-generic
 #   GNU Bash 4.3
 #-----------------------------------  
