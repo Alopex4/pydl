@@ -28,12 +28,18 @@ $ chmod +x pydl.sh
 ```Bash
 $ ./pydl <ip> [port]
 ```
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/start.png)
 # Download a file
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/download_file.png)
+
+# Key interactive usage
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/key.png)
 
 # Enter a directory
-
-# Key interactive
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/enter_dir.png)
 
 # Go to Previous directory
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/previous_dir.png)
 
 # Exit the script
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/exit.png)
