@@ -15,7 +15,25 @@ $ python3 -m http.server [port]
 ```
 *: If you ommit the ```port```, the port default value is ```8080``` .
 
-# The traditional download way
+# The traditional download way (If your network speed is fine, that's ok). 
 **open browser** --> **enter "```http://ip:8080/```"** --> **select file to download**
 
 ![image](https://github.com/Alopex4/pydl/blob/master/photoes/tradition.png)
+
+#IF you prefer CLI, this script is built for you.
+```Bash
+$ chmod +x pydl.sh
+```
+# Execute the script
+```Bash
+$ ./pydl <ip> [port]
+```
+# Download a file
+
+# Enter a directory
+
+# Key interactive
+
+# Go to Previous directory
+
+# Exit the script
