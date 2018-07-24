@@ -13,7 +13,7 @@ $ python -m SimpleHTTPServer [port]
 ```Bash
 $ python3 -m http.server [port]
 ```
-*: If you ommit the ```port```, the port default value is ```8080``` .
+*: If you omitted the ```port```, the port default value is ```8080``` .
 
 # The traditional download way (If your network speed is fine, that's ok). 
 **open browser** --> **enter "```http://ip:8080/```"** --> **select file to download**
