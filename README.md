@@ -18,4 +18,4 @@ $ python3 -m http.server [port]
 # The traditional download way
 **open browser** --> **enter "```http://ip:8080/```"** --> **select file to download**
 
-![image](http://github.com/Alopex4/pydl/photoes/tradition.png)
+![image](https://github.com/Alopex4/pydl/blob/master/photoes/tradition.png)
