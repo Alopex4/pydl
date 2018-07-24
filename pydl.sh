@@ -107,7 +107,6 @@ prepare(){
 get_contains(){
     local utf_index="${temp_dir}utf.index.html"
     wget -qc ${index} -P ${temp_dir}
-    # cat ${index_page} | iconv -f GBK -t UTF-8 > "${utf_index}"
     cat ${index_page} | iconv -t UTF-8 > "${utf_index}"
     local contains=`sed -e 's/<[^>]*>//g' ${utf_index} | grep -v "^$" | uniq`
     echo "${contains}"
@@ -168,7 +167,6 @@ download_file(){
     then
         echo "Downloading .. "
         wget -qc ${directory}${file} -P ${download_dir}
-        # echo "wget -qc ${directory}${file} -P ${download_dir}"
     else
         echo "Canceling .. "
     fi
