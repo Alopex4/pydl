@@ -182,7 +182,8 @@ download_file(){
     if [ "${YN}" == "y" -o "${YN}" == "yes" ]
     then
         echo "Downloading .. "
-        wget -qc ${directory}${file} -P ${download_dir}
+        # wget -qc ${directory}${file} -P ${download_dir}
+        wget -qc ${directory}${file} -P ${download_dir} -O ${file}
     else
         echo "Canceling .. "
     fi
