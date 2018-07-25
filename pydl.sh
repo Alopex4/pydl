@@ -96,20 +96,22 @@ PORT_validity(){
 
 network_staus(){
     local try_time=3
-    while [ "${try_time}" -ne 0 ]
+    local success=-1
+    while [ "${try_time}" -ne 0 -a "${success}" -ne 0 ]
     do
+        sleep 0.7
         curl -s -o /dev/null -w "${http_code}" --connect-timeout 2 ${source_index}
-        if [ "$?" -eq "0" ]
-        then
-            break
-        else
-            sleep 0.7 
-            let try_time--
-            echo -e "Can't reach the web page."
-            exit ${NETWORK_ERROR}
-        fi
+        success=$?
+        let try_time--
     done
+
+    if [ "${success}" -ne 0 ]
+    then
+        echo -e "Can't reach the web page."
+        exit ${NETWORK_ERROR}
+    fi
 }
+
 
 # --------------------------------------
 # management function
