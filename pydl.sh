@@ -94,7 +94,7 @@ PORT_validity(){
    fi
 }
 
-network_staus(){
+network_status(){
     local try_time=3
     local success=-1
     while [ "${try_time}" -ne 0 -a "${success}" -ne 0 ]
@@ -118,7 +118,7 @@ network_staus(){
 prepare(){
     IP_validity
     PORT_validity
-    network_staus
+    network_status
 }
 # --------------------------------------
 
